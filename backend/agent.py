@@ -7,6 +7,10 @@ from langchain_openai import ChatOpenAI
 import os
 import json
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 def create_agent():
     """Create and return the LearnPath AI agent"""
