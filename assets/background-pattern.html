@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnPath AI - Background Pattern</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #050505;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .pattern-container {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            gap: 0;
+            opacity: 0.08;
+        }
+        
+        .pattern-cell {
+            position: relative;
+        }
+        
+        .pattern-cell::before {
+            content: '';
+            position: absolute;
+            inset: 25%;
+            background: #00d4aa;
+            border-radius: 50%;
+        }
+        
+        .pattern-cell:nth-child(3n)::before {
+            background: #a855f7;
+        }
+        
+        .pattern-cell:nth-child(5n)::before {
+            background: #3b82f6;
+        }
+        
+        .pattern-cell:nth-child(7n)::before {
+            opacity: 0.5;
+        }
+        
+        .gradient-overlay {
+            position: fixed;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(0,212,170,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(168,85,247,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .vignette {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at center, transparent 40%, #050505 100%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-container" id="pattern"></div>
+    <div class="gradient-overlay"></div>
+    <div class="vignette"></div>
+    
+    <script>
+        const pattern = document.getElementById('pattern');
+        for (let i = 0; i < 400; i++) {
+            const cell = document.createElement('div');
+            cell.className = 'pattern-cell';
+            pattern.appendChild(cell);
+        }
+    </script>
+</body>
+</html>

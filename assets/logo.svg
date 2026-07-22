@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="aurora" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.4"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background glow -->
+  <circle cx="60" cy="60" r="50" fill="url(#glow)" filter="url(#blur)"/>
+  
+  <!-- Outer rings -->
+  <circle cx="60" cy="60" r="55" fill="none" stroke="rgba(0,212,170,0.2)" stroke-width="1"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(168,85,247,0.15)" stroke-width="1"/>
+  <circle cx="60" cy="60" r="41" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="1"/>
+  
+  <!-- Core circle -->
+  <circle cx="60" cy="60" r="32" fill="url(#aurora)"/>
+  
+  <!-- Letter L -->
+  <text x="60" y="72" font-family="Inter, sans-serif" font-size="36" font-weight="800" fill="#050505" text-anchor="middle">L</text>
+  
+  <!-- Decorative dots -->
+  <circle cx="60" cy="12" r="2" fill="#00d4aa" opacity="0.6"/>
+  <circle cx="108" cy="60" r="2" fill="#a855f7" opacity="0.6"/>
+  <circle cx="60" cy="108" r="2" fill="#3b82f6" opacity="0.6"/>
+  <circle cx="12" cy="60" r="2" fill="#00d4aa" opacity="0.6"/>
+</svg>
