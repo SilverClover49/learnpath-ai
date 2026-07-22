@@ -382,7 +382,7 @@ if st.session_state.chat_history:
     st.markdown(h, unsafe_allow_html=True)
 
 # Layout
-col1, col2 = st.columns([2, 1], gap="2rem")
+col1, col2 = st.columns([2, 1], gap="large")
 
 with col1:
     for msg in st.session_state.chat_history:

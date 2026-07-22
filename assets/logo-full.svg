@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="aurora" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="120" fill="#050505"/>
+  
+  <!-- Logo Mark -->
+  <g transform="translate(60, 60)">
+    <!-- Rings -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="rgba(0,212,170,0.25)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="32" fill="none" stroke="rgba(168,85,247,0.2)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="1.5"/>
+    
+    <!-- Core -->
+    <circle cx="0" cy="0" r="16" fill="url(#aurora)"/>
+    
+    <!-- Icon -->
+    <path d="M0 -6L-8 -2L0 2L8 -2L0 -6Z" stroke="#050505" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-8 6L0 10L8 6" stroke="#050505" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-8 2L0 6L8 2" stroke="#050505" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="130" y="58" font-family="Inter, sans-serif" font-size="42" font-weight="200" fill="#fafafa" letter-spacing="-0.5">Learn</text>
+  <text x="222" y="58" font-family="Inter, sans-serif" font-size="42" font-weight="700" fill="url(#aurora)" letter-spacing="-0.5">Path</text>
+  
+  <!-- Tagline -->
+  <text x="130" y="80" font-family="Inter, sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.4)" letter-spacing="3">AI-POWERED LEARNING</text>
+</svg>

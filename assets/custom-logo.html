@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnPath AI - Custom Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #050505;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .logo-showcase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 120px;
+            padding: 80px;
+        }
+        
+        .logo-variant {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .variant-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+        
+        /* Primary Logo */
+        .logo-primary {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        .logo-mark {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+        
+        .mark-ring {
+            position: absolute;
+            inset: 0;
+            border: 1.5px solid rgba(0,212,170,0.25);
+            border-radius: 50%;
+        }
+        
+        .mark-ring:nth-child(2) {
+            inset: 8px;
+            border-color: rgba(168,85,247,0.2);
+        }
+        
+        .mark-ring:nth-child(3) {
+            inset: 16px;
+            border-color: rgba(59,130,246,0.15);
+        }
+        
+        .mark-core {
+            position: absolute;
+            inset: 24px;
+            background: linear-gradient(135deg, #00d4aa 0%, #a855f7 50%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mark-core svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .logo-wordmark {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .wordmark-main {
+            font-size: 42px;
+            font-weight: 200;
+            letter-spacing: -0.02em;
+            color: #fafafa;
+            line-height: 1;
+        }
+        
+        .wordmark-main span {
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4aa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .wordmark-sub {
+            font-size: 11px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+        
+        /* Icon Only */
+        .logo-icon {
+            width: 120px;
+            height: 120px;
+            position: relative;
+        }
+        
+        .icon-ring {
+            position: absolute;
+            inset: 0;
+            border: 2px solid rgba(0,212,170,0.2);
+            border-radius: 50%;
+        }
+        
+        .icon-ring:nth-child(2) {
+            inset: 12px;
+            border-color: rgba(168,85,247,0.15);
+        }
+        
+        .icon-ring:nth-child(3) {
+            inset: 24px;
+            border-color: rgba(59,130,246,0.1);
+        }
+        
+        .icon-core {
+            position: absolute;
+            inset: 36px;
+            background: linear-gradient(135deg, #00d4aa 0%, #a855f7 50%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content:;
+        }
+        
+        .icon-core svg {
+            width: 36px;
+            height: 36px;
+        }
+        
+        /* Horizontal Logo */
+        .logo-horizontal {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .horizontal-mark {
+            width: 48px;
+            height: 48px;
+            position: relative;
+        }
+        
+        .h-ring {
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(0,212,170,0.2);
+            border-radius: 50%;
+        }
+        
+        .h-ring:nth-child(2) {
+            inset: 6px;
+            border-color: rgba(168,85,247,0.15);
+        }
+        
+        .h-core {
+            position: absolute;
+            inset: 12px;
+            background: linear-gradient(135deg, #00d4aa, #a855f7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .h-core svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        .horizontal-text {
+            font-size: 24px;
+            font-weight: 200;
+            letter-spacing: -0.01em;
+            color: #fafafa;
+        }
+        
+        .horizontal-text span {
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4aa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Dark on Light */
+        .logo-light {
+            background: #fafafa;
+            padding: 60px 100px;
+            border-radius: 24px;
+        }
+        
+        .logo-light .wordmark-main {
+            color: #050505;
+        }
+        
+        .logo-light .wordmark-main span {
+            background: linear-gradient(135deg, #00b894, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo-light .wordmark-sub {
+            color: rgba(0,0,0,0.4);
+        }
+        
+        .logo-light .mark-ring {
+            border-color: rgba(0,184,148,0.2);
+        }
+        
+        .logo-light .mark-ring:nth-child(2) {
+            border-color: rgba(147,51,234,0.15);
+        }
+        
+        .logo-light .mark-ring:nth-child(3) {
+            border-color: rgba(59,130,246,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-showcase">
+        <!-- Primary Logo -->
+        <div class="logo-variant">
+            <span class="variant-label">Primary</span>
+            <div class="logo-primary">
+                <div class="logo-mark">
+                    <div class="mark-ring"></div>
+                    <div class="mark-ring"></div>
+                    <div class="mark-ring"></div>
+                    <div class="mark-core">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="logo-wordmark">
+                    <div class="wordmark-main">Learn<span>Path</span></div>
+                    <div class="wordmark-sub">AI-Powered Learning</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Icon Only -->
+        <div class="logo-variant">
+            <span class="variant-label">Icon</span>
+            <div class="logo-icon">
+                <div class="icon-ring"></div>
+                <div class="icon-ring"></div>
+                <div class="icon-ring"></div>
+                <div class="icon-core">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Horizontal -->
+        <div class="logo-variant">
+            <span class="variant-label">Horizontal</span>
+            <div class="logo-horizontal">
+                <div class="horizontal-mark">
+                    <div class="h-ring"></div>
+                    <div class="h-ring"></div>
+                    <div class="h-core">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="horizontal-text">Learn<span>Path</span></div>
+            </div>
+        </div>
+        
+        <!-- Light Version -->
+        <div class="logo-variant">
+            <span class="variant-label">Light Mode</span>
+            <div class="logo-light">
+                <div class="logo-primary">
+                    <div class="logo-mark">
+                        <div class="mark-ring"></div>
+                        <div class="mark-ring"></div>
+                        <div class="mark-ring"></div>
+                        <div class="mark-core">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="logo-wordmark">
+                        <div class="wordmark-main">Learn<span>Path</span></div>
+                        <div class="wordmark-sub">AI-Powered Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
